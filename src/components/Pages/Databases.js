@@ -18,7 +18,7 @@ export default function DataBases(props) {
 
     useEffect(() => {
         axios
-            .get("http://apigo-docker.herokuapp.com/databases")
+            .get("/databases")
             .then(res => setDbs(res.data))
             .catch(err => console.log(err));
     }, [msg]);
@@ -33,7 +33,7 @@ export default function DataBases(props) {
         setProgress(true);
         setModalShow(false);
         axios
-            .post("http://apigo-docker.herokuapp.com/databases", {"db": db})
+            .post("/databases", {"db": db})
             .then(() => {
                 setMsg('Database Created Successfully!');
                 setVariant('success');
@@ -48,7 +48,7 @@ export default function DataBases(props) {
     const handleDelete = db => {
         setProgress(true);
         axios
-            .delete("http://apigo-docker.herokuapp.com/databases/" + db)
+            .delete("/databases/" + db)
             .then(() => {
                 setMsg('Database Removed Successfully!');
                 setVariant('success');
@@ -66,7 +66,7 @@ export default function DataBases(props) {
                 {msg}
             </Alert>
             <div className="h3">Databases</div>
-            <Button variant="primary" onClick={() => setModalShow(true)} style={{marginBottom: "20px"}}>
+            <Button variant="primary"  onClick={() => setModalShow(true)} style={{marginBottom: "20px",cursor:"not-allowed"}} disabled>
                 {progress ? <Spinner animation="border" variant="light" as="span"/> : "Create Database"}
             </Button>
 
@@ -83,7 +83,8 @@ export default function DataBases(props) {
                             style={{marginRight:"20px"}}>
                                 {db}
                             </ListGroup.Item>
-                            <FontAwesomeIcon icon={faTrash} style={{cursor:"pointer"}} onClick={() => handleDelete(db)}/>
+                            <FontAwesomeIcon icon={faTrash} style={{cursor:"not-allowed"}}/>
+                            {/*<FontAwesomeIcon icon={faTrash} style={{cursor:"pointer"}} onClick={() => handleDelete(db)}/>*/}
                         </div>
                     ))
                 }

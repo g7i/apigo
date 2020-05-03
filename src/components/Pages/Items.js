@@ -10,7 +10,7 @@ export default function Items(props) {
 
     useEffect(() => {
         axios
-            .get(`http://apigo-docker.herokuapp.com/${props.match.params.db}/${props.match.params.table}`)
+            .get(`/${props.match.params.db}/${props.match.params.table}`)
             .then(res => {
                 setItems(res.data.data);
                 setFields(res.data.fields)
