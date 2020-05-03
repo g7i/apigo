@@ -33,7 +33,7 @@ export default function DataBases(props) {
         setProgress(true);
         setModalShow(false);
         axios
-            .post("/databases", {"db": db})
+            .post("https://apigo-docker.herokuapp.com/databases", {"db": db})
             .then(() => {
                 setMsg('Database Created Successfully!');
                 setVariant('success');
@@ -48,7 +48,7 @@ export default function DataBases(props) {
     const handleDelete = db => {
         setProgress(true);
         axios
-            .delete("/databases/" + db)
+            .delete("https://apigo-docker.herokuapp.com/databases/" + db)
             .then(() => {
                 setMsg('Database Removed Successfully!');
                 setVariant('success');

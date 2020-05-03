@@ -19,7 +19,7 @@ export default function Tables(props) {
 
     useEffect(() => {
         axios
-            .get(`/${props.match.params.db}/tables`)
+            .get(`https://apigo-docker.herokuapp.com/${props.match.params.db}/tables`)
             .then(res => setTables(res.data))
             .catch(err => console.log(err));
     }, [msg]);
@@ -58,7 +58,7 @@ export default function Tables(props) {
             fields : fieldsObj
         };
         axios
-            .post(`/${props.match.params.db}/tables`, data)
+            .post(`https://apigo-docker.herokuapp.com/${props.match.params.db}/tables`, data)
             .then(() => {
                 setMsg('Table Created Successfully!');
                 setVariant('success');
@@ -73,7 +73,7 @@ export default function Tables(props) {
     const handleDelete = table => {
         setProgress(true);
         axios
-            .delete(`/${props.match.params.db}/tables/` + table)
+            .delete(`https://apigo-docker.herokuapp.com/${props.match.params.db}/tables/` + table)
             .then(() => {
                 setMsg('Table Removed Successfully!');
                 setVariant('success');
