@@ -57,8 +57,15 @@ export default function Tables(props) {
             table : name.trim(),
             fields : fieldsObj
         };
+
+        const configs = {
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+            }
+        };
+
         axios
-            .post(`https://apigo-docker.herokuapp.com/${props.match.params.db}/tables`, data)
+            .post(`https://apigo-docker.herokuapp.com/${props.match.params.db}/tables`, data, config)
             .then(() => {
                 setMsg('Table Created Successfully!');
                 setVariant('success');
