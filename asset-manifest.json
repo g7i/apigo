@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/apigo/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/apigo/static/js/main.37cae7cc.chunk.js",
+    "main.js.map": "/apigo/static/js/main.37cae7cc.chunk.js.map",
+    "runtime-main.js": "/apigo/static/js/runtime-main.b1c5d4d5.js",
+    "runtime-main.js.map": "/apigo/static/js/runtime-main.b1c5d4d5.js.map",
+    "static/css/2.69121389.chunk.css": "/apigo/static/css/2.69121389.chunk.css",
+    "static/js/2.0345811b.chunk.js": "/apigo/static/js/2.0345811b.chunk.js",
+    "static/js/2.0345811b.chunk.js.map": "/apigo/static/js/2.0345811b.chunk.js.map",
+    "index.html": "/apigo/index.html",
+    "precache-manifest.91bcde0123223b6a8ca0e74d263f3094.js": "/apigo/precache-manifest.91bcde0123223b6a8ca0e74d263f3094.js",
+    "service-worker.js": "/apigo/service-worker.js",
+    "static/css/2.69121389.chunk.css.map": "/apigo/static/css/2.69121389.chunk.css.map",
+    "static/css/main.5ecd60fb.chunk.css.map": "/apigo/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.0345811b.chunk.js.LICENSE.txt": "/apigo/static/js/2.0345811b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b1c5d4d5.js",
+    "static/css/2.69121389.chunk.css",
+    "static/js/2.0345811b.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.37cae7cc.chunk.js"
+  ]
+}
