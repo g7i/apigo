@@ -58,7 +58,7 @@ export default function Tables(props) {
             fields : fieldsObj
         };
 
-        const configs = {
+        const config = {
             headers: {
                 "Access-Control-Allow-Origin": "*",
             }
