@@ -18,7 +18,7 @@ export default function DataBases(props) {
 
     useEffect(() => {
         axios
-            .get("/databases")
+            .get("http://apigo-docker.herokuapp.com/databases")
             .then(res => setDbs(res.data))
             .catch(err => console.log(err));
     }, [msg]);
