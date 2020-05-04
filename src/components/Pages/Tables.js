@@ -59,7 +59,7 @@ export default function Tables(props) {
         };
 
         axios
-            .post(`https://apigo-docker.herokuapp.com/${props.match.params.db}/tables`, data, config)
+            .post(`https://apigo-docker.herokuapp.com/${props.match.params.db}/tables`, data)
             .then(() => {
                 setMsg('Table Created Successfully!');
                 setVariant('success');
